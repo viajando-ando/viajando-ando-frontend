@@ -2,7 +2,7 @@ import API from "../APIS/apis";
 import { getCategoriesAction } from "./categoriesDuck";
 
 const URL = API.crudEmployees;
-const ENDPOINT = "/employees";
+const ENDPOINT = "/travels";
 
 const GET_EMPLOYEES = "GET_EMPLOYEES";
 const GET_EMPLOYEES_SUCCESS = "GET_EMPLOYEES_SUCCESS";
@@ -110,6 +110,34 @@ export const getEmployeesAction = () => (dispatch, getState) => {
   });
 
   return fetch(URL + ENDPOINT)
+    .then((response) => {
+      // debugger;
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw response;
+      }
+    })
+    .then((res) => {
+      dispatch({
+        type: GET_EMPLOYEES_SUCCESS,
+        payload: res.data,
+      });
+    })
+    .catch((error) => {
+      dispatch({
+        type: GET_EMPLOYEES_ERROR,
+        payload: error.status,
+      });
+    });
+};
+
+export const getEmployeesActionPage = (page) => (dispatch, getState) => {
+  dispatch({
+    type: GET_EMPLOYEES,
+  });
+
+  return fetch(URL + ENDPOINT + "/" + page)
     .then((response) => {
       // debugger;
       if (response.ok) {

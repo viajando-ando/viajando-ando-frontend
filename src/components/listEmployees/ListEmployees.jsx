@@ -3,15 +3,43 @@ import "./ListEmployees.scss";
 import CardEmployee from "../../components/cardEmployee/CardEmployee";
 import { connect } from "react-redux";
 import ModalSuccess from "../modal/Success/Success";
+import { getEmployeesActionPage } from "../../redux/employeesDuck";
 
-const ListEmployees = ({ employees }) => {
-  const listEmployees = employees.map((employee) => {
+var currentPage = 1;
+var pages;
+const ListEmployees = ({ employees, getEmployeesActionPage }) => {
+  let travels = employees.travels ? employees.travels : [];
+  pages = employees.pages;
+  
+
+  function getNextTravel(){
+    if( currentPage <= pages-1 )
+    {
+      currentPage++;
+      getEmployeesActionPage(currentPage);
+    }
+  }
+
+  const getPrevTravel= () => {
+    console.log("reversa");
+    if( currentPage > 1 )
+    {
+      currentPage--;
+      getEmployeesActionPage(currentPage);
+    }
+  }
+
+  
+
+  const listEmployees = travels.map((employee) => {
     return <CardEmployee employee={employee} />;
   });
 
+  // console.log(pagesList);
+
   return (
     <>
-      <div className="container-list-employees">
+      {/* <div className="container-list-employees">
         <div className="container-list-employees--checkbox">
           <input type="checkbox" className="box"></input>
         </div>
@@ -19,8 +47,13 @@ const ListEmployees = ({ employees }) => {
         <p className="container-list-employees--title">Salario</p>
         <p className="container-list-employees--title">Estado</p>
         <p className="container-list-employees--title">Acciones</p>
-      </div>
+      </div> */}
       <div>{listEmployees}</div>
+      <div key="sectionPages">
+        <p>Current Page: { currentPage } of {pages}</p>
+        <button onClick={ getPrevTravel }> Prev Page</button>
+        <button onClick={getNextTravel}> Next Page</button>
+      </div>
       <ModalSuccess />
     </>
   );
@@ -32,4 +65,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(ListEmployees);
+export default connect(mapStateToProps, {getEmployeesActionPage})(ListEmployees);

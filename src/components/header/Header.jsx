@@ -8,20 +8,20 @@ const Header = ({ userName }) => (
     <label htmlFor="toggle">&#9776;</label>
     <input id="toggle" type="checkbox" />
     <div className="menu--items">
-      <Link to="/">
+      {/* <Link to="/">
         <p>Home</p>
-      </Link>
-      <Link to="/login">
+      </Link> */}
+      {/* <Link to="/login">
         <p>Login</p>
-      </Link>
+      </Link> */}
       <Link to="/dashboard">
         <p>Dashboard</p>
       </Link>
-      <Link to="/profile">
+      {/* <Link to="/profile">
         <p>Profile</p>
-      </Link>
+      </Link> */}
       <a
-        href="https://platzi-master-23c57.wl.r.appspot.com/api-docs/"
+        href="https://viajando-ando-ykmiteeaiq-uc.a.run.app"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -29,7 +29,10 @@ const Header = ({ userName }) => (
       </a>
     </div>
     <div className="menu--userName">
-      {userName ? <p>{userName}</p> : <p>Registrate</p>}
+      {/* {userName ? <p>{userName}</p> : <p>Registrate</p>} */}
+      <p><a href="https://dflores.dev"
+        target="_blank"
+        rel="noopener noreferrer">Sitio web: dflores.dev</a></p>
     </div>
   </nav>
 );

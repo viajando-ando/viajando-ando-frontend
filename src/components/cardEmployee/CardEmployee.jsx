@@ -28,46 +28,60 @@ class CardEmployee extends React.Component {
 
   render() {
     const { employee } = this.props;
-
+    // console.log("-->", employee);
     return (
       <div key={employee._id} className="card-employee">
-        <div>
+        {/* <div>
           <div className="container-list-employees--checkbox">
             <input type="checkbox" className="box"></input>
           </div>
+        </div> */}
+        { employee.passenger ? 
+        <div className="align">
+          <p className="title-list">{employee.passenger.first_name} {employee.passenger.last_name}</p>
+          <p className="sub-title-list">Passenger</p>
         </div>
-        <div className="card-employee--employee">
-          <div
-            className="content-img"
-            style={{
-              background: `url(${employee.url_img}) no-repeat`,
-              backgroundSize: "100% 100%",
-              width: "100px",
-              height: "100px",
-              borderRadius: "50%",
-            }}
-          ></div>
-          <div className="card-employee--employee__name">
-            <p className="title-list">
-              {employee.nombre} {employee.apellido}
-            </p>
-            <p className="sub-title-list">{employee.cargo}</p>
-          </div>
+        :
+        ""
+        }
+        <div className="align">
+          <p className="title-list">{employee.driver.first_name} {employee.driver.last_name}</p>
+          <p className="sub-title-list">Lat: {employee.driver_location.coordinates[0]}</p>
+          <p className="sub-title-list">Long: {employee.driver_location.coordinates[1]}</p>
+          <p className="sub-title-list">Driver</p>
         </div>
-        <div>
-          <p className="title-list">{employee.salario} USD</p>
-          <p className="sub-title-list">{employee.jornada}</p>
+        <div className="align">
+          <p className="title-list">{employee.start.pickup_address}</p>
+          <p className="sub-title-list">Lat: {employee.start.pickup_location.coordinates[0]}</p>
+          <p className="sub-title-list">Long: {employee.start.pickup_location.coordinates[1]}</p>
+          <p className="sub-title-list">Start</p>
         </div>
-        <div>
-          <p>{employee.estado}</p>
+        <div className="align">
+          <p className="title-list">{employee.end.pickup_address}</p>
+          <p className="sub-title-list">Lat: {employee.end.pickup_location.coordinates[0]}</p>
+          <p className="sub-title-list">Long: {employee.end.pickup_location.coordinates[1]}</p>
+          <p className="sub-title-list">Destination</p>
+        </div>
+        <div className="align">
+          <p className="title-list">{employee.country.name}</p>
+          <p className="sub-title-list">{employee.city.name}</p>
+          <p className="sub-title-list">Check code: {employee.check_code}</p>
+        </div>
+        <div className="align">
+          <p className="title-list">{employee.price}</p>
+          <p className="sub-title-list">Price</p>
+        </div>
+        <div className="align">
+          <p className="title-list">{employee.status}</p>
+          <p className="sub-title-list">Statu</p>
         </div>
         <div className="card-employee--buttons">
           <div onClick={this.actionEditModal}>
             <Icons name="edit" className="actions" />
           </div>
-          <div onClick={this.actionModal}>
+          {/* <div onClick={this.actionModal}>
             <Icons name="delete" className="actions" />
-          </div>
+          </div> */}
           <ModalDelete
             openModal={this.state.openModal}
             actionModal={this.actionModal}
