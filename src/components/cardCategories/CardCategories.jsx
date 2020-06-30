@@ -4,7 +4,6 @@ import Icons from "../../utils/icons/svgIcons";
 import { connect } from "react-redux";
 
 const CardCategories = ({ categories }) => {
-console.log("=====>", categories);
 
   const listCategories = categories.map((categorie) => (
     <p key={categorie} className="category">

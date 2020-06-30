@@ -21,7 +21,6 @@ const ListEmployees = ({ employees, getEmployeesActionPage }) => {
   }
 
   const getPrevTravel= () => {
-    console.log("reversa");
     if( currentPage > 1 )
     {
       currentPage--;
