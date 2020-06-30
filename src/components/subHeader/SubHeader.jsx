@@ -11,7 +11,6 @@ const SubHeader = ({ changeStatusModalAddEmployeeAction }) => {
 
   return (
     <div className="container-sub-header">
-      <p>Lista de empleados</p>
       <button onClick={actionModal}>Agregar</button>
       <FormEmployee />
     </div>
