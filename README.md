@@ -1,24 +1,16 @@
-# Platzi Employees :smiley:
+# Viajando Ando :smiley:
 
-In this project you can see a CRUD about employees
+In this project you can see travels
 
-## You can view the project in the next URL or [live demo](https://platzi-master.dflores.dev/):
+## You can view the project in the next URL or [live demo](https://viajando-ando.dflores.dev/):
 
 #### `https://platzi-master.dflores.dev/`
 
+#### The complete documentation [it's here](https://github.com/viajando-ando/documentation)
+
 ## Description :open_book:
 
-All app have [Routers](https://reacttraining.com/react-router/) to redirect or navegate to others sections. Also it's hosted by [Firebase](https://firebase.google.com/?hl=es-419&gclid=EAIaIQobChMInJGMkamv6QIVQwnnCh0PrATwEAAYASAAEgLom_D_BwE) and one API deployed in [Google App Engine](https://cloud.google.com/appengine?hl=es)
-
-### 1. Home :house:
-
-Only is a landing Page
-![](./.readme-statics/home.png)
-
-### 2. Login :door:
-
-This section have different methods to login, the provider it's firebase. The routes are protected to start session
-![](./.readme-statics/login.png)
+All app have [Routers](https://reacttraining.com/react-router/) to redirect or navegate to others sections. Also it's hosted by [Firebase](https://firebase.google.com/?hl=es-419&gclid=EAIaIQobChMInJGMkamv6QIVQwnnCh0PrATwEAAYASAAEgLom_D_BwE) and one API deployed in [Google Cloud Run](https://cloud.google.com/run?hl=es)
 
 ### 3. Dashboard :chart_with_downwards_trend:
 
@@ -29,7 +21,7 @@ Use [Redux](https://redux.js.org/basics/usage-with-react) for the state and acti
 
 ### 4. Backend :sunglasses:
 
-You can see the magic in [this link](https://platzi-master-23c57.wl.r.appspot.com/api-docs/)
+You can see the magic in [this link](https://viajando-ando-ykmiteeaiq-uc.a.run.app/)
 
 ## Feedback
 
