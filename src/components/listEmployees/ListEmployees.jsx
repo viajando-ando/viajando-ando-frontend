@@ -51,8 +51,8 @@ const ListEmployees = ({ employees, getEmployeesActionPage }) => {
       <div>{listEmployees}</div>
       <div key="sectionPages">
         <p>Current Page: { currentPage } of {pages}</p>
-        <button onClick={ getPrevTravel }> Prev Page</button>
-        <button onClick={getNextTravel}> Next Page</button>
+        <button onClick={ getPrevTravel }> &lt; Prev Page</button>
+        <button onClick={getNextTravel}> Next Page &gt;</button>
       </div>
       <ModalSuccess />
     </>

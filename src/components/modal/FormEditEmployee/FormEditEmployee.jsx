@@ -14,14 +14,14 @@ const FormEditEmployee = ({
 }) => {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => {
-    addEmployeeAction({ id: employee._id, ...data });
-    actionModal();
+    // addEmployeeAction({ id: employee._id, ...data });
+    // actionModal();
   };
 
   return (
     <Modal openModal={openModal} actionModal={actionModal}>
       <div className="modal-form">
-        <p className="modal-form--title">Editar empleado</p>
+        <p className="modal-form--title">Edit travel</p>
         <form className="modal-form--group" onSubmit={handleSubmit(onSubmit)}>
           <div className="input-form adjust-input">
             <input
@@ -119,7 +119,7 @@ const FormEditEmployee = ({
             </select>
           </div>
           <div className="input-form adjust-input">
-            <button>Actualizar</button>
+            <button>Coming soon</button>
           </div>
         </form>
       </div>

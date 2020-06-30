@@ -18,13 +18,13 @@ const FormEmployee = ({
 
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => {
-    addEmployeeAction(data);
+    // addEmployeeAction(data);
   };
 
   return (
     <Modal openModal={modalStatus} actionModal={closeModal}>
       <div className="modal-form">
-        <p className="modal-form--title">Agregar empleado</p>
+        <p className="modal-form--title">Add travel</p>
         <form className="modal-form--group" onSubmit={handleSubmit(onSubmit)}>
           <div className="input-form adjust-input">
             <input
@@ -116,7 +116,7 @@ const FormEmployee = ({
             </select>
           </div>
           <div className="input-form adjust-input">
-            <button>Agregar</button>
+            <button>Coming soon</button>
           </div>
         </form>
       </div>

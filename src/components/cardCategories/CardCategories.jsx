@@ -4,25 +4,21 @@ import Icons from "../../utils/icons/svgIcons";
 import { connect } from "react-redux";
 
 const CardCategories = ({ categories }) => {
+console.log("=====>", categories);
+
   const listCategories = categories.map((categorie) => (
     <p key={categorie} className="category">
-      <span role="img" aria-label={categorie}>
-        {categorie}
-      </span>
+      <p>{categorie._id.name}: {categorie.count}</p>
     </p>
   ));
 
   return (
     <div className="container-card-categories">
       <div className="container-card-categories--header">
-        <Icons name="success" fill="#cd7cf2" /> <p>Todos los empleados</p>
+        <Icons name="success" fill="#cd7cf2" /> <p>Travels by city</p>
       </div>
-      <p className="container-card-categories--description">Proyecto</p>
-      <p className="category active">
-        <span role="img" aria-label="Deportes">
-          Deportes 🐼
-        </span>
-      </p>
+      <p className="container-card-categories--description">Cities</p>
+     
       {listCategories}
     </div>
   );

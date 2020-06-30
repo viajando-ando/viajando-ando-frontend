@@ -1,6 +1,6 @@
 import API from "../APIS/apis";
 
-const ENDPOINT = "/employees/categories";
+const ENDPOINT = "/travels/count-cities";
 const URL = API.crudEmployees;
 
 const GET_CATEGORIES = "GET_CATEGORIES";
