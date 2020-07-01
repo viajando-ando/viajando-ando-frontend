@@ -14,7 +14,7 @@ All app have [Routers](https://reacttraining.com/react-router/) to redirect or n
 
 ### 3. Dashboard :chart_with_downwards_trend:
 
-The [carnita](https://www.google.com/search?q=tacos+de+carnitas&tbm=isch&ved=2ahUKEwiLiMP_q6_pAhXUYqwKHXbvB6QQ2-cCegQIABAA&oq=tacos+de+carnitas&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BggAEAcQHlCGJVjELmD3L2gAcAB4AIABqAGIAb0JkgEDMC45mAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=JB-7XovmFtTFsQX23p-gCg&bih=598&biw=1366#imgrc=WaXBLD3kyd5tsM) of the app, in this section you will see the all employees and you can play creating, deleting or modified that employees.
+The [carnita](https://www.google.com/search?q=tacos+de+carnitas&tbm=isch&ved=2ahUKEwiLiMP_q6_pAhXUYqwKHXbvB6QQ2-cCegQIABAA&oq=tacos+de+carnitas&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BggAEAcQHlCGJVjELmD3L2gAcAB4AIABqAGIAb0JkgEDMC45mAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=JB-7XovmFtTFsQX23p-gCg&bih=598&biw=1366#imgrc=WaXBLD3kyd5tsM) of the app, in this section you will see the all travels.
 Use [Redux](https://redux.js.org/basics/usage-with-react) for the state and actions to call differents function with the backend
 
 ![](./.readme-statics/dashboard.png)
